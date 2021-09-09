@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/icon_menu_search"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/filterProperties"
+        android:icon="@drawable/icon_menu_filter_properties"
+        android:title="@string/filter_properties"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/filterCities"
+        android:icon="@drawable/icon_menu_filter_cities"
+        android:title="@string/filter_cities"
+        app:showAsAction="ifRoom" />
+</menu>

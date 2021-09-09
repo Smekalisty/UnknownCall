@@ -1,0 +1,7 @@
+<resources>
+    <style name="ThemeOverlayTextInputOutlinedBox" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox" />
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+</resources>

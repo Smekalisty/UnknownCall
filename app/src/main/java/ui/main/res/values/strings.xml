@@ -1,0 +1,5 @@
+<resources>
+    <string name="menu_item_rookie">New employee</string>
+    <string name="menu_item_sign_out">Sign out</string>
+    <string name="menu_item_permission">Permission</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="label_permission">Permission</string>
+    <string name="permission_message">To know when a colleague calls you need to approve several permissions</string>
+    <string name="check_permissions">check permissions</string>
+</resources>

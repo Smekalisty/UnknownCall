@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.4.10'
+}
+
+android {
+    compileSdk 31
+    buildToolsVersion '31'
+
+    defaultConfig {
+        applicationId 'com.services.it.feel'
+        minSdk 23
+        targetSdk 31
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            manifestPlaceholders = [crashlyticsEnabled: true]
+        }
+
+        debug {
+            manifestPlaceholders = [crashlyticsEnabled: false]
+        }
+    }
+
+    kotlinOptions {
+        useIR = true
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res/',
+                    'src/main/java/ui/authentication/google/res',
+                    'src/main/java/ui/call/res',
+                    'src/main/java/ui/employees/res',
+                    'src/main/java/ui/main/res',
+                    'src/main/java/ui/permission/res',
+                    'src/main/java/ui/rookie/res',
+                    'src/main/java/ui/welcome/res'
+            ]
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+
+    implementation platform('com.google.firebase:firebase-bom:28.3.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.firebaseui:firebase-ui-storage:8.0.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-core:1.2.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-properties:1.2.2'
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+}

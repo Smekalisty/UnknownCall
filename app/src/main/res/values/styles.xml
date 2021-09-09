@@ -1,0 +1,5 @@
+<resources>
+    <style name="StyleTextInput" parent="Base.Widget.MaterialComponents.TextInputLayout">
+        <item name="materialThemeOverlay">@style/ThemeOverlayTextInputOutlinedBox</item>
+    </style>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="label_google_authentication">Authentication via Google</string>
+    <string name="waiting_for_authentication">Waiting for authentication</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_failed">Sign in failed</string>
+</resources>

@@ -1,0 +1,75 @@
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/employeesFragment">
+
+    <fragment
+        android:id="@+id/employeesFragment"
+        android:label="@string/label_employees"
+        android:name="ui.employees.EmployeesFragment">
+
+        <action
+            android:id="@+id/employees_to_welcome"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/navigation"
+            app:destination="@id/welcomeFragment" />
+
+        <action
+            android:id="@+id/employees_to_permission"
+            app:destination="@id/permissionFragment" />
+
+        <action
+            android:id="@+id/employees_to_rookie"
+            app:destination="@id/rookieFragment" />
+
+        <action
+            android:id="@+id/employees_to_filter_properties"
+            app:destination="@id/filterPropertiesDialog" />
+
+        <action
+            android:id="@+id/employees_to_filter_cities"
+            app:destination="@id/filterCitiesDialog" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:label="@string/label_welcome"
+        android:name="ui.welcome.WelcomeFragment">
+
+        <action
+            android:id="@+id/welcome_to_authenticate"
+            app:destination="@id/googleAuthenticationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/googleAuthenticationFragment"
+        android:label="@string/label_google_authentication"
+        android:name="ui.authentication.google.GoogleAuthenticationFragment">
+
+        <action
+            android:id="@+id/google_authentication_to_employees"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/navigation"
+            app:destination="@id/employeesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:label="@string/label_permission"
+        android:name="ui.permission.PermissionFragment" />
+
+    <fragment
+        android:id="@+id/rookieFragment"
+        android:label="@string/label_rookie"
+        android:name="ui.rookie.RookieFragment" />
+
+    <dialog
+        android:id="@+id/filterPropertiesDialog"
+        android:name="ui.employees.FilterPropertiesDialog" />
+
+    <dialog
+        android:id="@+id/filterCitiesDialog"
+        android:name="ui.employees.FilterCitiesDialog" />
+
+</navigation>

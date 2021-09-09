@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_item_rookie"
+            android:icon="@drawable/menu_item_rookie"
+            android:title="@string/menu_item_rookie" />
+
+        <item
+            android:id="@+id/menu_item_permission"
+            android:icon="@drawable/menu_icon_permission"
+            android:title="@string/menu_item_permission" />
+        <item
+            android:id="@+id/menu_item_sign_out"
+            android:icon="@drawable/menu_item_sign_out"
+            android:title="@string/menu_item_sign_out" />
+    </group>
+</menu>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="label_employees">Employees</string>
+
+    <string name="search">Search</string>
+    <string name="filter_properties">Filter properties</string>
+    <string name="filter_cities">Filter cities</string>
+    <string name="the_list_of_employees_is_not_loaded">The list of employees isn\'t loaded</string>
+    <string name="no_matches">No matches</string>
+    <string translatable="false" name="combine_two_words">%1$s %2$s</string>
+
+    <string name="cities">Cities</string>
+    <string name="properties">Properties</string>
+
+    <string name="ask_your_manager_to_give_you_access">Ask your manager to give you access</string>
+</resources>
